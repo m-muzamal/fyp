@@ -1,0 +1,44 @@
+@import "../../style/styleSheet.scss";
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 2rem;
+  width: 100vw;
+  z-index: 10;
+  @include mb {
+    padding: 0.5rem 0.5rem;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    cursor: pointer;
+    li {
+      .txt {
+        color: #fff;
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+    @include mb {
+      display: none;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    p {
+      @include mb {
+        display: none;
+      }
+    }
+  }
+}

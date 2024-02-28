@@ -1,0 +1,32 @@
+@import "../../style/styleSheet.scss";
+.home {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(38, 38, 38, 0.3), rgba(0, 0, 0, 0.8)),
+    url("../../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  @include mb {
+    height: auto;
+  }
+  .home_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    @include mb {
+      margin: 4rem 0;
+    }
+    p {
+      width: 80%;
+      margin: 1rem;
+      @include mb {
+        width: 100%;
+      }
+    }
+  }
+}

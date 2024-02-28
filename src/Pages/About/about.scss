@@ -1,0 +1,104 @@
+@import "../../style/styleSheet.scss";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5rem 0;
+  justify-content: left;
+  align-items: center;
+  @include mb {
+    height: auto;
+    border-bottom: 0.1px solid #4db5ff53;
+  }
+  .container {
+    display: flex;
+    margin-top: 3rem;
+    @include mb {
+      flex-direction: column;
+    }
+    .left {
+      display: flex;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      @include mb {
+        width: 100%;
+        height: auto;
+      }
+      .about_us {
+        width: 50%;
+        height: 90%;
+        aspect-ratio: 1/1;
+        border-radius: 2rem;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          var(--color-primary),
+          transparent
+        );
+        display: grid;
+        place-items: center;
+        @include mb {
+          height: auto;
+          width: 70%;
+        }
+        img {
+          border-radius: 2rem;
+          overflow: hidden;
+          transform: rotate(10deg);
+          height: 100%;
+          transition: var(--transition);
+          &:hover {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem;
+      justify-content: space-evenly;
+      width: 50%;
+      gap: 3rem;
+      @include mb {
+        width: 100%;
+        padding: 0;
+        margin: 3rem 0;
+      }
+      .about_cards {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        @include mb {
+          width: 100%;
+          flex-wrap: wrap;
+          margin-bottom: 2rem;
+        }
+        .about_card {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          padding: 2rem;
+          height: 10rem;
+          width: 9rem;
+          border-radius: 0.5rem;
+          background: var(--color-bg-variant);
+          cursor: pointer;
+          @include mb {
+          }
+          svg {
+            color: var(--color-primary);
+            font-size: 30px;
+          }
+          &:hover {
+            background: var(--color-bg);
+          }
+        }
+      }
+    }
+  }
+}
