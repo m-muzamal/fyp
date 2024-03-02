@@ -1,0 +1,10 @@
+@import "../../style/styleSheet.scss";
+
+.card {
+  text-align: center;
+  .card_items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

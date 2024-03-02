@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer_container">
-        <h1 className="logo">UAF EXPRESS</h1>
+        <h1 className="logo footer_logo">UAF EXPRESS</h1>
         <ul className="footer_items">
           <li>Home</li>
           <li>About</li>

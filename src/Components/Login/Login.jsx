@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./login.scss";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [err, setErr] = useState("This is err msg");
@@ -71,7 +72,7 @@ const Login = () => {
           />
           <div className="btns">
             <button className="btn btn-primary">Sign In</button>
-            <a href="">Don't have account?</a>
+            <Link to="/signup">Don't have account?</Link>
           </div>
         </form>
       </div>

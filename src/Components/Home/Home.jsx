@@ -3,6 +3,7 @@ import "./home.scss";
 import About from "../../Pages/About/About";
 import Services from "../../Pages/Services/Services";
 import Contact from "../../Pages/Contact/Contact";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -22,9 +23,9 @@ const Home = () => {
             team is committed to ensuring your safety and comfort during your
             journey. So sit back, relax, and enjoy your ride with us!
           </p>
-          <a href="" className="btn">
+          <Link to="/ticket" className="btn">
             Book Your Tickets
-          </a>
+          </Link>
         </div>
       </section>
       <About />

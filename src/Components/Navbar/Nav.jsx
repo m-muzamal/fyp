@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
 import "./nav.scss";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [popup, setPopup] = useState(false);
@@ -26,19 +27,19 @@ const Nav = () => {
           <div className="popup">
             <ul>
               <li>
-                <a href="">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="">About</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <a href="">Services</a>
+                <Link to="/Services">Services</Link>
               </li>
               <li>
-                <a href="">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <a href="">Login</a>
+                <Link to="/login">Login</Link>
               </li>
             </ul>
           </div>
@@ -48,40 +49,40 @@ const Nav = () => {
           <p className="logo">UAF EXPRESS</p>
           <ul className="items">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className={activeItem === "home" ? "active" : "txt"}
                 onClick={() => handleClick("home")}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className={activeItem === "about" ? "active" : "txt"}
                 onClick={() => handleClick("about")}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/services"
                 className={activeItem === "services" ? "active" : "txt"}
                 onClick={() => handleClick("services")}
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className={activeItem === "contact" ? "active" : "txt"}
                 onClick={() => handleClick("contact")}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="right">

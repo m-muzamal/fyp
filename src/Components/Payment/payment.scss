@@ -1,0 +1,44 @@
+@import "../../style/styleSheet.scss";
+
+.payment {
+  display: flex;
+  padding: 5rem 0;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(38, 38, 38, 0.5), rgba(0, 0, 0, 0.9)),
+    url("../../assets/payment.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  @include mb {
+    height: auto;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    .payment-card {
+      ul > li {
+        width: 15rem;
+        height: 5rem;
+        border: 1px solid var(--color-primary);
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          &:hover {
+            scale: 1.1;
+          }
+        }
+      }
+    }
+    .form {
+      width: fit-content;
+      padding: 1rem 2rem;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+}
