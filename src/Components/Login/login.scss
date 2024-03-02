@@ -1,0 +1,53 @@
+@import "../../style/styleSheet.scss";
+
+.login {
+  display: flex;
+  padding: 5rem 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(38, 38, 38, 0.5), rgba(0, 0, 0, 0.9)),
+    url("../../assets/login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  @include mb {
+    height: auto;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    // border: 2px solid red;
+    justify-content: space-evenly;
+    gap: 3rem;
+    @include mb {
+      flex-direction: column;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      @include mb {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .form {
+      @include mb {
+        width: 100%;
+        padding: 1.5rem;
+      }
+    }
+    .form > .btns {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      a {
+        margin: 0;
+        font-size: 13px;
+      }
+    }
+  }
+}

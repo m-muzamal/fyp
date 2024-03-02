@@ -1,4 +1,29 @@
 @import "../../style/styleSheet.scss";
+.nav_section {
+  display: flex;
+  position: relative;
+  .btn {
+    height: fit-content;
+    align-self: flex-end;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  .popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 30px;
+    }
+  }
+}
 nav {
   display: flex;
   align-items: center;
@@ -31,13 +56,19 @@ nav {
     }
   }
   .right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    p {
+    .mb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
       @include mb {
         display: none;
+      }
+    }
+    .menu {
+      display: none;
+      @include mb {
+        display: block;
       }
     }
   }

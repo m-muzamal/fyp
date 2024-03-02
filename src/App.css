@@ -180,11 +180,40 @@ small {
 
 input,
 textarea {
-  border: 2px solid var(--color-bg-variant);
+  border: 2px solid var(--color-primary-variant);
   background: transparent;
   padding: 1rem;
   font-size: 15px;
   color: white;
   border-radius: 0.5rem;
   width: 100%;
+  resize: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label {
+  color: var(--color-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 40%;
+  background-color: var(--color-bg-variant);
+  border: 2px solid var(--color-primary-variant);
+  border-radius: 10px;
+}
+.err {
+  background-color: var(--color-bg);
+  padding: 0.3rem 0.7rem;
+  border-radius: 7px;
+  color: red;
 }
