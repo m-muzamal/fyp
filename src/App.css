@@ -163,6 +163,9 @@ small {
   align-items: center;
   font-size: 15px;
   gap: 0.5rem;
+  width: 15rem;
+  text-wrap: wrap;
+  text-wrap: nowrap;
 }
 .card_items > li > span {
   color: var(--color-primary);

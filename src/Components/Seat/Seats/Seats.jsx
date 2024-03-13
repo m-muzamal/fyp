@@ -1,26 +1,7 @@
 import React, { useState } from "react";
 import "./seats.scss";
-import seatData from "./seatData";
 
-const Seats = () => {
-  const [data, setData] = useState(seatData);
-
-  function handleClick(id) {
-    setData((prevData) => {
-      const updatedData = [...prevData];
-      const clickedSeatIndex = updatedData.findIndex((seat) => seat.id === id);
-
-      if (clickedSeatIndex !== -1) {
-        updatedData[clickedSeatIndex] = {
-          ...updatedData[clickedSeatIndex],
-          reserved: true,
-        };
-      }
-      console.log(updatedData);
-      return updatedData;
-    });
-  }
-
+const Seats = ({ data, handleClick }) => {
   return (
     <div className="seats">
       <div className="card">
@@ -30,7 +11,9 @@ const Seats = () => {
             <div
               key={index}
               className="box"
-              style={{ backgroundColor: `${data.reserved && "transparent"}` }}
+              style={{
+                backgroundColor: `${data.reserved ? "transparent" : "#4db5ff"}`,
+              }}
               onClick={() => handleClick(data.id)}
             >
               <p>{data.seat}</p>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./ticket.scss";
+import BusData from "./busData/BusData";
 
 const Ticket = () => {
+  const [bus, setBus] = useState();
   const [input, setInput] = useState({
     from: "",
     destination: "",
@@ -9,7 +11,7 @@ const Ticket = () => {
   });
 
   function handleChange(e) {
-    const { type, value, name } = e.target;
+    const { value, name } = e.target;
     console.log(name, value);
     setInput((prev) => {
       return {
@@ -21,6 +23,7 @@ const Ticket = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setBus(input);
     console.log(input);
   }
 
@@ -39,7 +42,12 @@ const Ticket = () => {
             <option value="Jhang">Jhang</option>
           </select>
           <label htmlFor="destination">Destination</label>
-          <select name="destination" id="from" onChange={handleChange} required>
+          <select
+            name="destination"
+            id="destination"
+            onChange={handleChange}
+            required
+          >
             <option value="">--Chose--</option>
             <option value="Lahore">Lahore</option>
             <option value="Rajana">Rajana</option>
@@ -58,13 +66,14 @@ const Ticket = () => {
           />
           <button className="btn btn-primary">Find bus</button>
         </form>
-        <div className="form">
-          <h2 className="bold_text">Bus from Lahore to Rajana</h2>
-          <p className="txt">Bus from Lahore to Rajana - 10:00 AM - 100Rs</p>
-          <p className="txt">Bus from Lahore to Rajana - 10:00 AM - 100Rs</p>
-          <p className="txt">Bus from Lahore to Rajana - 10:00 AM - 100Rs</p>
-          <p className="txt">Bus from Lahore to Rajana - 10:00 AM - 100Rs</p>
-        </div>
+        {bus && (
+          <div className="form">
+            <h2 className="bold_text">
+              Bus from {input.from} to {input.destination}
+            </h2>
+            <BusData route={bus} />
+          </div>
+        )}
       </div>
     </section>
   );
